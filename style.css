@@ -4,7 +4,7 @@
     border-bottom: 1px solid #ff8c00;
     display: flex;
     align-items: center;
-    background: #0a0e17;
+    background: #0a0e05;
     box-sizing: border-box;
     padding: 0 32px;
     justify-content: space-between;
@@ -75,28 +75,47 @@
 .container {
     max-width: 1400px;
     margin: 0 auto;          /* центрирует */
-    padding: 15px 30px 15px 30px;
+    padding: 15px 30px;
+    flex: 1;
+}
+
+.back_color_main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #0a0e17;
     background-image: url(img/back.webp);
     background-repeat: no-repeat;
     background-position:center;
     background-attachment: fixed;
     background-size: cover;
-  
-}
-
-.back_color_main {
-    background-color: #0a0e05;
 }
 
 .back_color_footer {
     width: 100%;      
-    height: 60px;
-    background-color: #efdca6;
+    height: 50px;
+    background: #0a0e17;
+    border-top: 1px solid #ff8c00;
+    color: #888;
 }
 
-.font_main {
-    font-size: 22px;
-    color: #d0c8be;
-    letter-spacing: 2px;
-    font-family: 'Exo 2', sans-serif;
+.article {
+    background: rgba(10, 14, 23, 0.75);
+    border: 1px solid rgba(255, 140, 0, 0.3);
+    border-radius: 8px;
+    padding: 32px;
+    line-height: 1.7;
+    font-size: 18px;
+}
+
+.article p {
+    margin-bottom: 16px;
+}
+
+.article h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #ff8c00;
+    margin-top: 24px;
+    font-size: 20px;
+    letter-spacing: 1px;
 }
