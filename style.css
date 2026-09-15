@@ -89,6 +89,8 @@
     background-position:center;
     background-attachment: fixed;
     background-size: cover;
+    color: #d0c8be;
+    font-family: 'Exo 2', sans-serif;
 }
 
 .back_color_footer {
