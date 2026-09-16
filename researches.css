@@ -7,10 +7,87 @@ h2, h3 {
 }
 .container { 
   text-align: center;
+  
 }
 
 .small-img {
   width: 600px;
   height: auto; /* сохраняет пропорции */ 
 }
+
+.font{
+  font-size: 22px;
+  color: #ff8c00;
+  letter-spacing: 2px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+
+/* #ff8c00 */
+/**/
+/*при наведение появляется рамка*/
+.hover-border {
+  display: inline-block;
+  padding: 10px 20px;
+  color: hsl(0, 0%, 0%);
+  text-decoration: none;
+  transition: all 0.4s ease;
+  position: relative;
+  border-radius: 20px;
+}
+
+.hover-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 3px solid transparent;
+  transition: border-color 0.4s ease;
+  border-radius: 20px;
+}
+
+.hover-border:hover::before {
+  border-color: #ff5722;
+  border-radius: 20px;
+}
+
+/*при наведение на слова появляется текст*/
+
+.expand-exobiology {
+  position: relative;
+  display: inline-block;
+  font-family: Arial, sans-serif;
+}
+
+.trigger-word {
+  cursor: pointer;
+  color: #ff5722;
+}
+
+.slide-text {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  margin-top: 8px;
+  max-height: 0;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: max-width 0.8s ease, opacity 0.8s ease, transform 0.8s ease;
+
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 12px;
+  width: max-content;
+  max-width: 480px;
+  box-shadow: 0 4px 12px #ff8c00;
+  color: #333;
+  line-height: 1.5;
+
+}
+
+.expand-exobiology:hover .slide-text {
+  max-height: 200px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
