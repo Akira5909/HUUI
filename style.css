@@ -36,7 +36,6 @@
     color: #ff8c00;
     letter-spacing: 2px;
     font-family: 'Exo', sans-serif;
-    
 }
 
 .nav {
@@ -90,6 +89,7 @@
     display: flex;
     flex-direction: column;
     padding: 15px 30px;
+
 }
 
 .container2{
@@ -141,6 +141,7 @@
 }
 
 .block1 {
+    font-size: 14px;
     margin: 0;
     line-height: 1.5;
     text-align: justify;
@@ -152,19 +153,25 @@
 }
 
 .block1_1 {
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.15;
+    text-align: justify;
+}
+
+.block1_2 {
     font-size: 16px;
     margin: 0;
     line-height: 1.15;
     text-align: justify;
 }
 
-
 .back_color_main {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     background-color: #0a0e17;
-    background-image: url(img/back.webp);
+    background-image: url(img/cosmos.webp);
     background-repeat: no-repeat;
     background-position:center;
     background-attachment: fixed;
