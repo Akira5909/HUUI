@@ -24,6 +24,14 @@
     border-radius: 45%;       /* округление*/
 }
 /**/
+
+.Mottos_structure {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 30px;
+
+}
+
 .title_logo_text {
     font-size: 22px;
     color: #8B00FF;
@@ -217,4 +225,17 @@ width: auto;
 ul, p {
     color: #8B00FF;
     list-style-type: none; /*убирает точку для каждого пункта в списке*/ 
+}
+
+.back_color_footer {
+    width: 100%;      
+    height: 50px;
+    background: #0a0e17;
+    border-top: 1px solid #ff8c00;
+    color: #888;
+}
+
+.footer_text_box {
+    display: flex;
+    gap: 80px;
 }
