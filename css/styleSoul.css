@@ -99,9 +99,9 @@ main {
     margin: 0 auto;         
     padding: 32px;
     flex: 1;
-    background: rgba(10, 14, 23, 0.75);
     line-height: 1.7;
     font-size: 1.125rem;
+    
 }
 
 
@@ -110,7 +110,7 @@ main {
     display: flex;
     flex-direction: column;
     background-color: #0a0e17;
-    background-image: url(img/cosmos.webp);
+    background-image: url(../img/cosmos.webp);
     background-repeat: no-repeat;
     background-position:center;
     background-attachment: fixed;
@@ -138,6 +138,7 @@ main {
 
 
 p {
+    text-align: justify;
     margin-bottom: 16px;
     text-indent: 2em;
     color: #8B00FF;
