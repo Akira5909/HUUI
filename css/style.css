@@ -1,3 +1,4 @@
+
 /* Основной фон + Если слитает картинка будет запасная заливка */
 .back_color_main {
     min-height: 100vh;
@@ -242,7 +243,46 @@
     font-family: 'Exo', sans-serif;
     color: #ff8c00;
     margin-top: 24px;
-    font-size: 30px;
+    font-size: clamp(20px, 4vw, 30px);
     letter-spacing: 1px;
     text-align: center;
+}
+
+
+@media (max-width: 767px) {
+    .container2, .container3, .container4 {
+        flex-direction: column;   /* картинка над/под текстом */
+        gap: 16px;
+    }
+}
+
+@media (max-width: 767px) {
+    .cont_img_size1, .cont_img_size2 {
+        max-width: 100%;      /* картинка = ширина экрана */
+        flex-shrink: 1;       /* разрешаем сжимать */
+    }
+}
+
+@media (max-width: 767px) {
+    .header {
+        flex-direction: column;   /* лого сверху, меню снизу */
+        height: auto;
+        padding: 12px;
+    }
+    .nav {
+        flex-wrap: wrap;          /* пункты переносятся */
+        justify-content: center;
+        gap: 16px;
+    }
+    .logo-img { width: 60px; height: 60px; }
+    .Mottos_structure { padding: 0; }
+}
+
+@media (max-width: 767px) {
+    .footer_text_box {
+        flex-direction: column;
+        gap: 4px;
+        padding: 12px;
+    }
+    .back_color_footer { height: auto; }
 }
