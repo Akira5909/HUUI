@@ -31,13 +31,6 @@
 }
 /**/
 
-.Mottos_structure {
-    display: flex;
-    flex-direction: column;
-    padding: 15px 30px;
-
-}
-
 .title_logo_text {
     font-size: clamp(1rem, 2.5vw, 1.375rem);
     color: #8B00FF;
@@ -50,6 +43,13 @@
     color: #8B00FF;
     letter-spacing: 2px;
     font-family: 'Exo', sans-serif;
+}
+
+.Mottos_structure {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 30px;
+
 }
 
 .nav {
@@ -239,9 +239,6 @@ img {
     max-width: 100%;
     height: auto;
 }
-
-
-
 
 .back_color_footer {
     width: 100%;      
