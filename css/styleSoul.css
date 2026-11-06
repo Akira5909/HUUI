@@ -1,12 +1,12 @@
 .header {
     width: 100%;        /*Делает шапку на всю ширину экрана*/
-    height: 100px;      /*ограничения по высоте*/
+    min-height: 100px;
     border-bottom: 1px solid #8B00FF; /*создает линию под контентом*/
     display: flex;      /* все элементы в теге встанут в ряд*/
     align-items: center; /* Работа с flex. Расположение блока относительно его границ*/
     background: #0a0e05;   
     box-sizing: border-box; /*ограничения для pudding не дает увеличить больше чем на 100%*/
-    padding: 0 32px; /* внутр. отступы*/
+    padding: 12px 32px; /* внутр. отступы*/
     justify-content: space-between; /*распределяет элементы относительно апервого и последнего элемента*/
 }
 
@@ -50,6 +50,7 @@
 .nav {
     display: flex;
     gap: 32px;
+    flex-wrap: wrap
 }
 
 .nav-link {
@@ -238,4 +239,44 @@ ul, p {
 .footer_text_box {
     display: flex;
     gap: 80px;
+}
+
+/* -------------------------------- Адаптация под мобилки -------------------------------- */
+
+@media (max-width: 767px) {
+    .container2, .container3, .container4 {
+        flex-direction: column;   /* картинка над/под текстом */
+        gap: 16px;
+    }
+}
+
+@media (max-width: 767px) {
+    .cont_img_size1, .cont_img_size2 {
+        max-width: 100%;      /* картинка = ширина экрана */
+        flex-shrink: 1;       /* разрешаем сжимать */
+    }
+}
+
+@media (max-width: 767px) {
+    .header {
+        flex-direction: column;   /* лого сверху, меню снизу */
+        height: auto;
+        padding: 12px;
+    }
+    .nav {
+        flex-wrap: wrap;          /* пункты переносятся */
+        justify-content: center;
+        gap: 16px;
+    }
+    .logo-img { width: 60px; height: 60px; }
+    .Mottos_structure { padding: 0; }
+}
+
+@media (max-width: 767px) {
+    .footer_text_box {
+        flex-direction: column;
+        gap: 4px;
+        padding: 12px;
+    }
+    .back_color_footer { height: auto; }
 }

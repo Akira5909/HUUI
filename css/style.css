@@ -248,6 +248,7 @@
     text-align: center;
 }
 
+/* -------------------------------- Адаптация под мобилки -------------------------------- */
 
 @media (max-width: 767px) {
     .container2, .container3, .container4 {
