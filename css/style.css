@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     background-color: #0a0e17;
-    background-image: url(img/cosmos.webp);
+    background-image: url("img/cosmos.webp");
     background-repeat: no-repeat;
     background-position:center;
     background-attachment: fixed;
@@ -44,11 +44,10 @@
 }
 
 .title_logo_text {
-    font-size: 22px;
+    font-size: clamp(1rem, 2.5vw, 1.375rem);
     color: #ff8c00;
-    letter-spacing: 2px;
-    font-family: 'Orbitron', sans-serif;
-    
+    letter-spacing: 1px;
+    font-family: 'Orbitron', sans-serif;    
 }
 
 .title_logo_subtext {
@@ -119,7 +118,7 @@
 .Structure {
     max-width: 1400px;
     margin: 0 auto;          /* центрирует */
-    padding: 15px 30px;
+    padding: 32px;
     flex: 1;
 }
 
@@ -189,25 +188,8 @@
 }
 
 /* -------------------------------- БУКВЫ И ШРИФТЫ -------------------------------- */
-
-.title_main {
-    margin: 0;
-    line-height: 1.5;
+#center{
     text-align: center;
-}
-
-.subtitle_main {
-    font-size: 14px;
-    margin: 0;
-    line-height: 1.5;
-    text-align: justify;
-}
-
-.subtitle_main_large {
-    font-size: 16px;
-    margin: 0;
-    line-height: 1.15;
-    text-align: justify;
 }
 
 .article {
@@ -220,23 +202,31 @@
 }
 
 .article p {
-    margin-bottom: 16px;
+    margin: 0;
+    line-height: 1.5;
+    text-align: justify;
 }
+
 
 .article h2 {
     font-family: 'Orbitron', sans-serif;
     color: #ff8c00;
     margin-top: 24px;
-    font-size: 24px;
+    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
     letter-spacing: 1px;
+    line-height: 1.5;
+    text-align: center;
 }
 
 .article h3 {
     font-family: 'Orbitron', sans-serif;
     color: #ff8c00;
     margin-top: 24px;
-    font-size: 18px;
+    font-size: clamp(1rem, 1.8vw, 1.125rem);
     letter-spacing: 1px;
+  
+    line-height: 1.5;
+    text-align: center;
 }
 
 .article h1 {
