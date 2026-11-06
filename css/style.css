@@ -245,9 +245,7 @@
         flex-direction: column;   /* картинка над/под текстом */
         gap: 16px;
     }
-}
 
-@media (max-width: 767px) {
     .cont_img_size1, .cont_img_size2 {
         max-width: 100%;      /* картинка = ширина экрана */
         flex-shrink: 1;       /* разрешаем сжимать */

@@ -190,7 +190,7 @@ h2, h3 {
 .card {
     flex: 1 1 400px;   /* расти/сжимайся, базовая ширина 400px */
     max-width: 500px;
-    width: 100%;
+    min-width: 0; /*Разрешаем карточкам сжиматься*/
     height: auto;
     padding: 20px;
     border: 5px solid #8B00FF;
@@ -267,9 +267,11 @@ img {
     }
     .logo-img { width: 60px; height: 60px; }
     .Mottos_structure { padding: 0; }
-}
-
-@media (max-width: 767px) {
+    
+    main, .article {
+        padding: 16px; /* Уменьшаем отступы для мобилок */
+    }
+    
     .footer_text_box {
         flex-direction: column;
         gap: 4px;
