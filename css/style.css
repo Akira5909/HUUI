@@ -275,3 +275,16 @@
     }
     .back_color_footer { height: auto; }
 }
+
+/* -------------------------------- Визуализация -------------------------------- */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #0a0e17; 
+}
+::-webkit-scrollbar-thumb {
+    background: #ff8c00; 
+    border-radius: 5px;
+}

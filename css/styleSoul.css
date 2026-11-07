@@ -101,7 +101,6 @@ main {
     flex: 1;
     line-height: 1.7;
     font-size: 1.125rem;
-    
 }
 
 
@@ -138,7 +137,6 @@ main {
 
 
 p {
-    text-align: justify;
     margin-bottom: 16px;
     text-indent: 2em;
     color: #8B00FF;
@@ -182,7 +180,10 @@ h2, h3 {
 /* маленькая картинка для карточек*/
 .small-img-card {
     width: 100%;
-    height: auto; 
+    height: 250px;        /* <--- Фиксируем высоту картинок */
+    object-fit: cover;    /* <--- Картинка заполнит блок, а лишнее обрежется */
+    border-radius: 8px;   /* Добавим скругление картинкам для красоты */
+    margin-bottom: 15px;  /* Отступ от картинки до текста */ 
 }
 
 
@@ -194,10 +195,16 @@ h2, h3 {
     min-width: 0; /*Разрешаем карточкам сжиматься*/
     height: auto;
     padding: 20px;
+    padding-bottom: 20px;
     border: 5px solid #8B00FF;
     border-radius: 20px;
     box-shadow: 0 2px 4px #8B00FF;
-    text-align: justify;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Карточка приподнимается */
+    box-shadow: 0 10px 20px rgba(139, 0, 255, 0.4); /* Усиливается фиолетовое свечение */
 }
 
 .card_down {
@@ -225,6 +232,7 @@ h2, h3 {
     display: flex;              /* ставит элементы в строку */
     flex-wrap: wrap;
     gap: 20px;                 /* расстояние между карточкой и картинкой */
+    align-items: flex-start;
 }
 
 ul {
@@ -279,4 +287,100 @@ img {
         padding: 12px;
     }
     .back_color_footer { height: auto; }
+}
+
+/* -------------------------------- Визуализация -------------------------------- */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #0a0e17; 
+}
+::-webkit-scrollbar-thumb {
+    background: #8B00FF; 
+    border-radius: 5px;
+}
+
+details {
+    margin-bottom: 12px; /* отступ между выпадающими блоками */
+    border: 1px solid rgba(139, 0, 255, 0.3); /* легкая фиолетовая рамка */
+    border-radius: 8px;
+    background: rgba(139, 0, 255, 0.05); /* легкий фиолетовый фон */
+    padding: 10px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+summary {
+    cursor: pointer; /* показывает, что можно кликнуть */
+    font-family: 'Orbitron', sans-serif;
+    color: #8B00FF;
+    font-weight: bold;
+    text-indent: 0; /* УБИРАЕМ красную строку, которая ломает вид */
+    margin-bottom: 0;
+    list-style: none; /* Убираем стандартный треугольник (для некоторых браузеров) */
+    display: flex;
+    justify-content: space-between; /* текст слева, плюсик справа */
+    align-items: center;
+}
+
+summary::-webkit-details-marker {
+    display: none; 
+}
+
+/* Добавляем свой красивый плюсик/стрелочку */
+summary::after {
+    content: '+'; /* по умолчанию плюс */
+    font-size: 20px;
+    font-weight: bold;
+    color: #8B00FF;
+    transition: transform 0.3s;
+}
+
+/* Когда блок открыт, меняем плюс на минус (или поворачиваем стрелку) */
+details[open] summary::after {
+    content: '−'; /* минус */
+}
+
+/* Убираем красную строку у текста внутри details */
+details p {
+    text-indent: 0; 
+    margin-top: 10px; /* отступ от заголовка до текста */
+    margin-bottom: 0;
+    font-size: 0.95rem; /* чуть уменьшаем шрифт для аккуратности */
+}
+
+/* Красивое выделение при наведении */
+summary:hover {
+    color: #a64dff;
+}
+
+.card details:last-child {
+    margin-bottom: 0;
+}
+
+
+/**/
+/* Настраиваем обертку на Grid-анимацию */
+.details-content {
+    display: grid;
+    grid-template-rows: 0fr; /* В закрытом состоянии высота 0 */
+    transition: grid-template-rows 0.3s ease-out; /* Плавность */
+}
+
+/* Когда details открыт (браузер сам ставит атрибут open) */
+details[open] .details-content {
+    grid-template-rows: 1fr; /* Растягиваем на всю высоту контента */
+}
+
+/* Внутренний блок прячет текст при схлопывании */
+.details-inner {
+    overflow: hidden;
+}
+
+/* Чуть поправляем отступы, чтобы текст не прыгал */
+.details-inner p {
+    margin-top: 10px; 
+    margin-bottom: 0; 
 }
